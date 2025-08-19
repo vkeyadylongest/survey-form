@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Vibe Survey Form</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">Vibe Check Survey</h1>
+            <p id="description">Help us understand your current vibes and preferences</p>
+        </header>
+        
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+                <label id="number-label" for="number">Age <span class="clue">(optional)</span></label>
+                <input type="number" id="number" name="age" min="13" max="120" placeholder="Age">
+            </div>
+            
+            <div class="form-group">
+                <p>Which option best describes your current vibe?</p>
+                <select id="dropdown" name="vibe" required>
+                    <option disabled selected value>Select current vibe</option>
+                    <option value="chill">Chill & Relaxed</option>
+                    <option value="energetic">Energetic & Productive</option>
+                    <option value="creative">Creative & Inspired</option>
+                    <option value="focused">Focused & Determined</option>
+                    <option value="social">Social & Outgoing</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <p>How would you rate your day so far?</p>
+                <label>
+                    <input name="day-rating" value="amazing" type="radio" class="input-radio" checked>Amazing
+                </label>
+                <label>
+                    <input name="day-rating" value="good" type="radio" class="input-radio">Good
+                </label>
+                <label>
+                    <input name="day-rating" value="okay" type="radio" class="input-radio">Okay
+                </label>
+                <label>
+                    <input name="day-rating" value="meh" type="radio" class="input-radio">Meh
+                </label>
+                <label>
+                    <input name="day-rating" value="rough" type="radio" class="input-radio">Rough
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <p>What activities improve your vibe? <span class="clue">(Check all that apply)</span></p>
+                <label>
+                    <input name="prefer" value="music" type="checkbox" class="input-checkbox">Listening to music
+                </label>
+                <label>
+                    <input name="prefer" value="exercise" type="checkbox" class="input-checkbox">Exercise
+                </label>
+                <label>
+                    <input name="prefer" value="reading" type="checkbox" class="input-checkbox">Reading
+                </label>
+                <label>
+                    <input name="prefer" value="socializing" type="checkbox" class="input-checkbox">Socializing
+                </label>
+                <label>
+                    <input name="prefer" value="nature" type="checkbox" class="input-checkbox">Spending time in nature
+                </label>
+                <label>
+                    <input name="prefer" value="creative" type="checkbox" class="input-checkbox">Creative activities
+                </label>
+                <label>
+                    <input name="prefer" value="relaxing" type="checkbox" class="input-checkbox">Relaxing alone time
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <p>Any additional comments about your vibes?</p>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your thoughts here..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Submit Vibes</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
